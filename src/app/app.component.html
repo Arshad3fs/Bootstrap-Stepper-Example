@@ -1,0 +1,52 @@
+<div class="container" id="myWizard">
+  <hr>
+  <div class="progress"> 
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="1" aria-valuemin="1"
+      aria-valuemax="4" #progressbar [ngStyle]="{'width': progressbarWidth}">
+      {{progressbarText}}
+    </div>
+  </div>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <ul class="nav nav-pills nav-wizard">
+        <li class="active" (click)="handleStepChange(1)">
+          <a class="hidden-xs" href="#step1" data-toggle="tab" data-step="1">1. Details</a>
+          <a class="visible-xs" href="#step1" data-toggle="tab" data-step="1">1.</a>
+          <div class="nav-arrow"></div>
+        </li>
+        <li class="disabled" (click)="handleStepChange(2)">
+          <div class="nav-wedge"></div>
+          <a class="hidden-xs" href="#step2" data-toggle="tab" data-step="2">2. Shipping</a>
+          <a class="visible-xs" href="#step2" data-toggle="tab" data-step="2">2.</a>
+          <div class="nav-arrow"></div>
+        </li>
+        <li class="disabled" (click)="handleStepChange(3)">
+          <div class="nav-wedge"></div>
+          <a class="hidden-xs" href="#step3" data-toggle="tab" data-step="3">3. Payment</a>
+          <a class="visible-xs" href="#step3" data-toggle="tab" data-step="3">3.</a>
+          <div class="nav-arrow"></div>
+        </li>
+        <li class="disabled" (click)="handleStepChange(4)">
+          <div class="nav-wedge"></div>
+          <a class="hidden-xs" href="#step4" data-toggle="tab" data-step="4">4. Review</a>
+          <a class="visible-xs" href="#step4" data-toggle="tab" data-step="4">4.</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="step1">
+      <h3>1. Details</h3>
+    </div>
+    <div class="tab-pane fade" id="step2">
+      <h3>2. Shipping</h3>
+    </div>
+    <div class="tab-pane fade" id="step3">
+      <h3 class="panel-title display-td">Payment Details</h3>
+    </div>
+    <div class="tab-pane fade" id="step4">
+
+      <h3>4. Review Order</h3> Add another almost done step here..
+    </div>
+  </div>
+</div>
